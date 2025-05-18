@@ -1,0 +1,115 @@
+/* Umum */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #e6f0fa;
+    margin: 0;
+    padding: 0;
+    color: #333;
+}
+
+/* Container utama */
+.container {
+    max-width: 960px;
+    margin: 40px auto;
+    padding: 25px;
+    background-color: #ffffff;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    border-radius: 12px;
+}
+
+/* Heading */
+h1, h2 {
+    color: #0d47a1;
+    font-weight: 700;
+    margin-bottom: 20px;
+}
+
+/* Video Player */
+video {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+/* Tombol */
+button, .btn {
+    font-size: 16px;
+    padding: 10px 20px;
+    border-radius: 6px;
+    border: none;
+    transition: all 0.3s ease-in-out;
+}
+
+.btn-primary {
+    background-color: #1976d2;
+    color: white;
+}
+
+.btn-primary:hover {
+    background-color: #1565c0;
+}
+
+.btn-secondary {
+    background-color: #90a4ae;
+    color: white;
+}
+
+.btn-secondary:hover {
+    background-color: #78909c;
+}
+
+.btn-success {
+    background-color: #2e7d32;
+    color: white;
+}
+
+.btn-success:hover {
+    background-color: #1b5e20;
+}
+
+.btn-outline-info {
+    border: 2px solid #0288d1;
+    color: #0288d1;
+    background-color: transparent;
+}
+
+.btn-outline-info:hover {
+    background-color: #0288d1;
+    color: white;
+}
+
+/* Tombol Group */
+#video-controls {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+/* Link umum */
+a {
+    color: #0d47a1;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/* Responsif */
+@media (max-width: 768px) {
+    .container {
+        margin: 20px;
+        padding: 15px;
+    }
+
+    h2 {
+        font-size: 1.5rem;
+    }
+
+    button, .btn {
+        width: 100%;
+        margin-top: 10px;
+    }
+}

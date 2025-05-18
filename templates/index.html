@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Home Page</title>
+
+    <!-- Meta & Bootstrap -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- CSS Kustom -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+
+    <!-- Bootstrap dari local dan CDN sebagai fallback -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/bootstrap.min.css') }}">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+          integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QLQk1iFV12LyOWqyj8p8WZO+3q7a" crossorigin="anonymous">
+
+    <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+</head>
+<body>
+    <div class="container mt-5">
+        <div class="text-center mb-4">
+            <h2 class="font-weight-bold text-primary">🎬 Video Streaming</h2>
+        </div>
+
+        <!-- ✅ Video -->
+        <div class="mb-4">
+            <video id="videoPlayer" class="rounded shadow-sm" style="max-width: 100%; width: 640px;" controls>
+
+                <source src="{{ url_for('static', filename='video/sample.mp4') }}" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+        </div>
+
+        <!-- ✅ Kontrol Video -->
+        <div id="video-controls" class="text-center mb-4">
+            <button id="playBtn" class="btn btn-primary">▶️ Play</button>
+            <button id="pauseBtn" class="btn btn-secondary">⏸️ Pause</button>
+            <button id="fullScreenBtn" class="btn btn-success">⛶ Fullscreen</button>
+        </div>
+
+        <!-- ✅ Tombol ke Dashboard -->
+        <div class="text-center">
+            <button onclick="window.location.href='/dashboard'" class="btn btn-outline-info">📊 Go to Dashboard</button>
+        </div>
+    </div>
+
+    <!-- JavaScript lokal -->
+    <script src="{{ url_for('static', filename='js/video.js') }}"></script>
+</body>
+</html>
